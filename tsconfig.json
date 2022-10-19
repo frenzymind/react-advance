@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    // позволяет обрабатывать так же js файлы
+    "allowJs": true,
+    "moduleResolution": "node",
+    // для абсолютного импорта
+    // "baseUrl": ".",
+    // позволяет работтаь с пакетами которые использует common js, как с обычными пакетами с помощью import (require() module.export) = common js
+    // import Moment from 'moment'
+    // без флага - undefined
+    // с флагом - [object Object]
+    "esModuleInterop": true,
+    // Если библиотека не имеет default export
+    // лоадеры вроде ts-loader или babel-loader автоматически создают их
+    // вместо import * as React from 'react'   => import react from 'react'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
