@@ -2,5 +2,7 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "i18n-ally.localesPaths": ["public/locales"],
   "i18n-ally.sourceLanguage": "ru",
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+  "eslint.run": "onSave",
+  "eslint.lintTask.enable": true
 }
