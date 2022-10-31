@@ -31,6 +31,11 @@
         "no-duplicate-imports": "error",
         "camelcase": "error",
         "spaced-comment": "error",
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "react/jsx-props-no-spreading": "warn",
+        "no-underscore-dangle": "off"
+    },
+    "globals": {
+        "__IS_DEV__": true
     }
 }
