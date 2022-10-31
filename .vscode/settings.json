@@ -4,5 +4,12 @@
   "i18n-ally.sourceLanguage": "ru",
   "i18n-ally.keystyle": "nested",
   "eslint.run": "onSave",
-  "eslint.lintTask.enable": true
+  "eslint.lintTask.enable": true,
+  "stylelint.enable": true,
+  "css.validate": true,
+  "scss.validate": true,
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
 }
