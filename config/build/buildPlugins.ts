@@ -3,8 +3,13 @@ import webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BuildOptions } from './types/config'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({
+    paths,
+    isDev,
+    analyze,
+}: BuildOptions): webpack.WebpackPluginInstance[] {
     return [
         new webpack.ProgressPlugin(),
         new HTMLWebpackPlugin({
@@ -17,6 +22,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        ...(isDev && [new ReactRefreshWebpackPlugin({ overlay: false })]),
-    ]
+        isDev && new ReactRefreshWebpackPlugin({ overlay: false }),
+        analyze && new BundleAnalyzerPlugin({ analyzerHost: '0.0.0.0', analyzerPort: 8888 }),
+    ].filter(Boolean)
 }
