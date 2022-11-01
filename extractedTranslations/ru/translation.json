@@ -3,6 +3,9 @@
   "LANG_SWITCHER": "LANG_SWITCHER",
   "MAIN_PAGE_CONTENT": "MAIN_PAGE_CONTENT",
   "PAGE_NOT_FOUND": "PAGE_NOT_FOUND",
+  "RELOAD_PAGE_BUTTON": "RELOAD_PAGE_BUTTON",
+  "THROW_ERROR_BUTTON": "THROW_ERROR_BUTTON",
+  "UNEXPECTED_ERROR": "UNEXPECTED_ERROR",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
   "Язык": "Язык"
