@@ -27,10 +27,10 @@
     "settings": {
         "react": {
             "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {}
         }
-        // "import/resolver": {
-        //     "typescript": {}
-        // }
     },
     "rules": {
         "react/react-in-jsx-scope": "off",
@@ -42,7 +42,7 @@
         "no-underscore-dangle": "off"
         // "i18next/no-literal-string": [
         //     "error",
-        //     { "markupOnly": true, "ignoreAttribute": ["stroke"] }
+        //     { "markupOnly": true, "ignoreAttribute": ["stroke", "data-testid", "to"] }
         // ]
     },
     "globals": {
@@ -53,6 +53,12 @@
             "files": ["**/src/**/*.test.{ts,tsx}"],
             "rules": {
                 "i18next/no-literal-string": "off"
+            }
+        },
+        {
+            "files": ["**/src/**/*.stories.{ts,tsx}"],
+            "rules": {
+                "react/jsx-props-no-spreading": "off"
             }
         }
     ]
