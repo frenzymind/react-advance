@@ -1,8 +1,9 @@
 {
-  "MAIN_PAGE_CONTENT": "Main page",
-  "LANG_SWITCHER": "Русский",
-  "PAGE_NOT_FOUND": "Page not found",
-  "UNEXPECTED_ERROR": "An unexpected error has occurred",
-  "RELOAD_PAGE_BUTTON": "Reload page",
-  "THROW_ERROR_BUTTON": "Throw exception"
+    "MAIN_PAGE_CONTENT": "Main page",
+    "LANG_SWITCHER": "Русский",
+    "PAGE_NOT_FOUND": "Page not found",
+    "UNEXPECTED_ERROR": "An unexpected error has occurred",
+    "RELOAD_PAGE_BUTTON": "Reload page",
+    "THROW_ERROR_BUTTON": "Throw exception",
+    "LANG_SHORT": "EN"
 }

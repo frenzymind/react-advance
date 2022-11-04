@@ -1,8 +1,9 @@
 {
-  "MAIN_PAGE_CONTENT": "Главная страница",
-  "LANG_SWITCHER": "English",
-  "PAGE_NOT_FOUND": "Страница не найдена",
-  "UNEXPECTED_ERROR": "Произошла непредвиденная ошибка",
-  "RELOAD_PAGE_BUTTON": "Перезагрузить страницу",
-  "THROW_ERROR_BUTTON": "Ошибиться"
+    "MAIN_PAGE_CONTENT": "Главная страница",
+    "LANG_SWITCHER": "English",
+    "PAGE_NOT_FOUND": "Страница не найдена",
+    "UNEXPECTED_ERROR": "Произошла непредвиденная ошибка",
+    "RELOAD_PAGE_BUTTON": "Перезагрузить страницу",
+    "THROW_ERROR_BUTTON": "Ошибиться",
+    "LANG_SHORT": "RU"
 }
