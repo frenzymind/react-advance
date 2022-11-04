@@ -10,7 +10,7 @@ export function buildPlugins({
     isDev,
     analyze,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new webpack.ProgressPlugin(),
         new HTMLWebpackPlugin({
             template: paths.html,
@@ -22,7 +22,19 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        isDev && new ReactRefreshWebpackPlugin({ overlay: false }),
-        analyze && new BundleAnalyzerPlugin({ analyzerHost: '0.0.0.0', analyzerPort: 8888 }),
-    ].filter(Boolean)
+    ]
+
+    if (isDev) {
+        plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }))
+    }
+
+    if (analyze) {
+        new BundleAnalyzerPlugin({
+            analyzerHost: '0.0.0.0',
+            analyzerPort: 8888,
+            openAnalyzer: false,
+        })
+    }
+
+    return plugins
 }
