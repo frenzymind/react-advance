@@ -39,7 +39,9 @@
         "spaced-comment": "error",
         "quotes": ["error", "single"],
         "react/jsx-props-no-spreading": "warn",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
         // "i18next/no-literal-string": [
         //     "error",
         //     { "markupOnly": true, "ignoreAttribute": ["stroke", "data-testid", "to"] }
