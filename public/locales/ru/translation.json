@@ -6,5 +6,7 @@
   "RELOAD_PAGE_BUTTON": "Перезагрузить страницу",
   "THROW_ERROR_BUTTON": "Ошибиться",
   "LANG_SHORT": "RU",
-  "LOG_IN": "Войти"
+  "LOG_IN": "Войти",
+  "COUNTER_INCREMENT": "увеличить",
+  "COUNTER_DECREMENT": "уменьшить"
 }

@@ -6,5 +6,7 @@
   "RELOAD_PAGE_BUTTON": "Reload page",
   "THROW_ERROR_BUTTON": "Throw exception",
   "LANG_SHORT": "EN",
-  "LOG_IN": "To come in"
+  "LOG_IN": "Login",
+  "COUNTER_INCREMENT": "increase",
+  "COUNTER_DECREMENT": "decrease"
 }
