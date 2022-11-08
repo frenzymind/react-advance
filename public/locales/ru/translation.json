@@ -8,5 +8,8 @@
   "LANG_SHORT": "RU",
   "LOG_IN": "Войти",
   "COUNTER_INCREMENT": "увеличить",
-  "COUNTER_DECREMENT": "уменьшить"
+  "COUNTER_DECREMENT": "уменьшить",
+  "USER_ENTER_FORM": "Войти",
+  "LOGIN_ENTER_USER_NAME": "Введите пользователя",
+  "LOGIN_ENTER_PASSWORD": "Введите пароль"
 }

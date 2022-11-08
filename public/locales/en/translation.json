@@ -8,5 +8,8 @@
   "LANG_SHORT": "EN",
   "LOG_IN": "Login",
   "COUNTER_INCREMENT": "increase",
-  "COUNTER_DECREMENT": "decrease"
+  "COUNTER_DECREMENT": "decrease",
+  "USER_ENTER_FORM": "Login",
+  "LOGIN_ENTER_USER_NAME": "Enter username",
+  "LOGIN_ENTER_PASSWORD": "enter password"
 }
