@@ -10,6 +10,10 @@ i18n.use(initReactI18next).init({
         escapeValue: false, // not needed for react!!
     },
 
+    react: {
+        useSuspense: false,
+    },
+
     resources: { ru: { translations: {} } },
 })
 
