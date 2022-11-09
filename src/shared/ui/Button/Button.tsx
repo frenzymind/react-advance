@@ -29,6 +29,7 @@ export const Button: FC<ButtonProps> = props => {
     const mods = {
         [cls.square]: square,
         [cls[size]]: size,
+        [cls.disabled]: otherProps.disabled,
     }
 
     return (

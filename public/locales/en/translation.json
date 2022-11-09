@@ -11,5 +11,8 @@
   "COUNTER_DECREMENT": "decrease",
   "USER_ENTER_FORM": "Login",
   "LOGIN_ENTER_USER_NAME": "Enter username",
-  "LOGIN_ENTER_PASSWORD": "enter password"
+  "LOGIN_ENTER_PASSWORD": "enter password",
+  "AUTH_FORM_TITLE": "Authorization form",
+  "LOGIN_ERROR": "Login or password incorrect",
+  "LOG_OUT": "Go out"
 }
