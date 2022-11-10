@@ -29,11 +29,13 @@ export function buildPlugins({
     }
 
     if (analyze) {
-        new BundleAnalyzerPlugin({
-            analyzerHost: '0.0.0.0',
-            analyzerPort: 8888,
-            openAnalyzer: false,
-        })
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                analyzerHost: '0.0.0.0',
+                analyzerPort: 8888,
+                openAnalyzer: false,
+            }),
+        )
     }
 
     return plugins
