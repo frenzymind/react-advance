@@ -15,7 +15,9 @@
   "THROW_ERROR_BUTTON": "THROW_ERROR_BUTTON",
   "UNEXPECTED_ERROR": "UNEXPECTED_ERROR",
   "USER_ENTER_FORM": "USER_ENTER_FORM",
+  "Вы ввели неверный логин или пароль": "",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
+  "Форма авторизации": "",
   "Язык": "Язык"
 }
