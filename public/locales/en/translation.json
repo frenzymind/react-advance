@@ -14,5 +14,6 @@
   "LOGIN_ENTER_PASSWORD": "enter password",
   "AUTH_FORM_TITLE": "Authorization form",
   "LOGIN_ERROR": "Login or password incorrect",
-  "LOG_OUT": "Go out"
+  "LOG_OUT": "Go out",
+  "PROFILE_PAGE": "Profile"
 }
