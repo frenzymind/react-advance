@@ -18,8 +18,8 @@ export const ProfileCard: FC<ProfileCardProps> = props => {
     const { className } = props
     const { t } = useTranslation('profile')
     const data = useSelector(getProfileData)
-    const error = useSelector(getProfileError)
-    const isLoading = useSelector(getProfileIsLoading)
+    // const error = useSelector(getProfileError)
+    // const isLoading = useSelector(getProfileIsLoading)
 
     return (
         <div className={classNames(cls.ProfileCard, {}, [className])}>

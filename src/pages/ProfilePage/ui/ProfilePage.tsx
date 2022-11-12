@@ -24,8 +24,6 @@ const ProfilePage: FC<ProfilePageProps> = props => {
         dispatch(fetchProfileData())
     }, [dispatch])
 
-    const { t } = useTranslation()
-
     return (
         <DynamicModuleLoader reducers={reducersList} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>

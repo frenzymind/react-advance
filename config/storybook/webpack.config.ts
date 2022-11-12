@@ -1,5 +1,5 @@
 import path from 'path'
-import webpack, { DefinePlugin } from 'webpack'
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { BuildPaths } from '../build/types/config'
 
@@ -14,8 +14,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.resolve?.modules?.push(paths.src)
     config.resolve?.extensions?.push('ts', 'tsx')
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-explicit-any
-    config.module!.rules! = config!.module!.rules!.map((rule: any) => {
+    const rules = config.module?.rules as RuleSetRule[]
+
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    config.module!.rules = rules.map(rule => {
         if (/svg/.test(rule.test as string)) {
             return {
                 ...rule,
