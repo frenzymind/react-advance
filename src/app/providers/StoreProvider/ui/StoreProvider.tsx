@@ -1,4 +1,4 @@
-import { DeepPartial, ReducersMapObject } from '@reduxjs/toolkit'
+import { ReducersMapObject } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema'
 import type { FC, ReactNode } from 'react'
 import { Provider } from 'react-redux'
