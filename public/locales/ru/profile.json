@@ -10,5 +10,10 @@
   "PROFILE_AGE": "Возраст",
   "PROFILE_CITY": "Город",
   "PROFILE_USERNAME": "Пользовтель",
-  "PROFILE_AVATAR": "Аватар"
+  "PROFILE_AVATAR": "Аватар",
+  "SERVER_ERROR": "Ошибка сервера",
+  "INCORRECT_AGE": "Неверный возраст",
+  "INCORRECT_COUNTRY": "Ошибка в стране",
+  "INCORRECT_DATA": "Неверные данные",
+  "NO_DATA": "данные пусты"
 }

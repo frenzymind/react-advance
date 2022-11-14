@@ -1,8 +1,13 @@
 {
+  "": "",
   "CANCEL_EDIT_PROFILE": "",
   "EDIT_PROFILE": "",
   "ERROR_TEXT": "",
   "ERROR_TITLE": "",
+  "INCORRECT_AGE": "",
+  "INCORRECT_COUNTRY": "",
+  "INCORRECT_DATA": "",
+  "NO_DATA": "",
   "PROFILE_AGE": "",
   "PROFILE_AVATAR": "",
   "PROFILE_CITY": "",
@@ -10,5 +15,6 @@
   "PROFILE_NAME": "",
   "PROFILE_PAGE_TEXT": "",
   "PROFILE_USERNAME": "",
-  "SAVE_PROFILE": ""
+  "SAVE_PROFILE": "",
+  "SERVER_ERROR": ""
 }

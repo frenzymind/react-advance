@@ -10,5 +10,10 @@
   "PROFILE_AGE": "Age",
   "PROFILE_CITY": "City",
   "PROFILE_USERNAME": "User",
-  "PROFILE_AVATAR": "Avatar"
+  "PROFILE_AVATAR": "Avatar",
+  "SERVER_ERROR": "Server error",
+  "INCORRECT_AGE": "Wrong age",
+  "INCORRECT_COUNTRY": "country error",
+  "INCORRECT_DATA": "Wrong data",
+  "NO_DATA": "data is empty"
 }
