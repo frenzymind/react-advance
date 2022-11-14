@@ -2,5 +2,13 @@
   "PROFILE_PAGE_TEXT": "Профиль",
   "EDIT_PROFILE": "Редактировать",
   "PROFILE_NAME": "Имя",
-  "PROFILE_LASTNAME": "Фамилия"
+  "PROFILE_LASTNAME": "Фамилия",
+  "ERROR_TITLE": "Произошла ошибка при загрузке профиля",
+  "ERROR_TEXT": "Попробуйте обновить страницу",
+  "CANCEL_EDIT_PROFILE": "Отменить",
+  "SAVE_PROFILE": "Сохранить",
+  "PROFILE_AGE": "Возраст",
+  "PROFILE_CITY": "Город",
+  "PROFILE_USERNAME": "Пользовтель",
+  "PROFILE_AVATAR": "Аватар"
 }

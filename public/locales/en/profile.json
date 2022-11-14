@@ -2,5 +2,13 @@
   "PROFILE_PAGE_TEXT": "Profile",
   "EDIT_PROFILE": "Edit",
   "PROFILE_NAME": "Name",
-  "PROFILE_LASTNAME": "Surname"
+  "PROFILE_LASTNAME": "Surname",
+  "ERROR_TITLE": "An error occurred while loading the profile",
+  "ERROR_TEXT": "Try refreshing the page",
+  "CANCEL_EDIT_PROFILE": "Cancel",
+  "SAVE_PROFILE": "Save",
+  "PROFILE_AGE": "Age",
+  "PROFILE_CITY": "City",
+  "PROFILE_USERNAME": "User",
+  "PROFILE_AVATAR": "Avatar"
 }

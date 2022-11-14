@@ -15,5 +15,7 @@
   "AUTH_FORM_TITLE": "Authorization form",
   "LOGIN_ERROR": "Login or password incorrect",
   "LOG_OUT": "Go out",
-  "PROFILE_PAGE": "Profile"
+  "PROFILE_PAGE": "Profile",
+  "CURRENCY_SELECT": "Choose a currency",
+  "COUNTRY_SELECT": "choose a country"
 }

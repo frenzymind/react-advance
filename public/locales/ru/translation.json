@@ -15,5 +15,7 @@
   "AUTH_FORM_TITLE": "Форма авторизации",
   "LOGIN_ERROR": "Неверный логин или пароль",
   "LOG_OUT": "Выйти",
-  "PROFILE_PAGE": "Профиль"
+  "PROFILE_PAGE": "Профиль",
+  "CURRENCY_SELECT": "Выберите вылюту",
+  "COUNTRY_SELECT": "Выберите страну"
 }
