@@ -1,1 +1,4 @@
-{}
+{
+  "ARTICLE_NOT_FOUND": "Article not found",
+  "ARTICLE_ERROR": "Error loading article"
+}

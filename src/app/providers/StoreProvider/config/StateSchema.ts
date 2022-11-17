@@ -7,6 +7,7 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { AxiosInstance } from 'axios'
+import { articleDetailsSchema } from 'entities/Article/model/types/articleDetailsSchema'
 import { CounterSchema } from 'entities/Counter'
 import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
@@ -20,6 +21,7 @@ export interface StateSchema {
     // Async reducers
     loginForm?: LoginSchema
     profile?: ProfileSchema
+    articleDetails?: articleDetailsSchema
 }
 
 export interface ReducerManager {
