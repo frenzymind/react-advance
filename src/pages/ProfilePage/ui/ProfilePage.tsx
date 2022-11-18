@@ -23,6 +23,8 @@ import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { useTranslation } from 'react-i18next'
+import { useInitEffect } from 'shared/lib/hooks/useInitEffect/useInitEffect'
+import { useParams } from 'react-router-dom'
 
 interface ProfilePageProps {
     className?: string
@@ -50,11 +52,13 @@ const ProfilePage: FC<ProfilePageProps> = props => {
         [ValidateProfileError.NO_DATA]: t('NO_DATA'),
     }
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData())
+    const { id } = useParams<{ id: string }>()
+
+    useInitEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id))
         }
-    }, [dispatch])
+    })
 
     const onChangeFirstName = useCallback(
         (value?: string) => {

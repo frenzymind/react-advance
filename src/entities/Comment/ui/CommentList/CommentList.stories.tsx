@@ -1,12 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from 'shared/providers/ThemeProvider'
+
 import { CommentList } from './CommentList'
 
 export default {
-    title: 'entities/CommentList',
+    title: 'entities/Comment/CommentList',
     component: CommentList,
-
     argTypes: {
         backgroundColor: { control: 'color' },
     },
@@ -15,8 +13,23 @@ export default {
 const Template: ComponentStory<typeof CommentList> = args => <CommentList {...args} />
 
 export const Normal = Template.bind({})
-Normal.args = {}
+Normal.args = {
+    comments: [
+        {
+            id: '1',
+            text: 'hello world',
+            user: { id: '1', username: 'Vasya' },
+        },
+        {
+            id: '2',
+            text: 'Comment 2',
+            user: { id: '1', username: 'Petya' },
+        },
+    ],
+}
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+export const Loading = Template.bind({})
+Loading.args = {
+    comments: [],
+    isLoading: true,
+}

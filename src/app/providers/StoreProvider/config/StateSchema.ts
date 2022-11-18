@@ -11,6 +11,7 @@ import { articleDetailsSchema } from 'entities/Article/model/types/articleDetail
 import { CounterSchema } from 'entities/Counter'
 import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
+import { AddCommentFormSchema } from 'features/AddCommentForm'
 import { LoginSchema } from 'features/AuthByUsername'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { NavigateOptions, To } from 'react-router-dom'
@@ -24,6 +25,7 @@ export interface StateSchema {
     profile?: ProfileSchema
     articleDetails?: articleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentsSchema
+    addCommentForm?: AddCommentFormSchema
 }
 
 export interface ReducerManager {

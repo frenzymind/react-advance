@@ -12,6 +12,7 @@ const data = {
     first: 'Ivan',
     city: 'Mars',
     currency: Currency.EUR,
+    id: '1',
 }
 
 describe('updateProfileData.test', () => {
@@ -36,6 +37,7 @@ describe('updateProfileData.test', () => {
                 form: data,
             },
         })
+
         thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }))
 
         const result = await thunk.callThunk()
