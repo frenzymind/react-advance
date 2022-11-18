@@ -1,4 +1,5 @@
 {
   "ARTICLE_NOT_FOUND": "Статья не найдена",
-  "ARTICLE_ERROR": "Ошибка при загрузки статьи"
+  "ARTICLE_ERROR": "Ошибка при загрузки статьи",
+  "ARTICLES_COMMENTS_TITLE": "Комментарии"
 }

@@ -181,13 +181,15 @@
             "id": "1",
             "username": "admin",
             "password": "123",
-            "role": "ADMIN"
+            "role": "ADMIN",
+            "avatar": "https://png.pngtree.com/png-vector/20220113/ourmid/pngtree-cartoon-hand-drawn-cute-horse-head-png-image_4165754.png"
         },
         {
             "id": "2",
             "username": "user",
             "password": "123",
-            "role": "USER"
+            "role": "USER",
+            "avatar": "https://w7.pngwing.com/pngs/511/453/png-transparent-tenor-avatar-twilight-sparkle-computer-icons-discord-profile-horse-mammal-dragon.png"
         }
     ],
     "profile": {

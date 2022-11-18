@@ -17,5 +17,6 @@
   "LOG_OUT": "Go out",
   "PROFILE_PAGE": "Profile",
   "CURRENCY_SELECT": "Choose a currency",
-  "COUNTRY_SELECT": "choose a country"
+  "COUNTRY_SELECT": "choose a country",
+  "COOMENT_ABSENT": "No one has left a comment yet"
 }
