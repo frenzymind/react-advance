@@ -6,6 +6,6 @@ export const ArticlepageAsync = lazy(
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             // Тестовая задержка
-            setTimeout(() => resolve(import('./Articlepage')), 1500)
+            setTimeout(() => resolve(import('./Articlepage')), 400)
         }),
 )
