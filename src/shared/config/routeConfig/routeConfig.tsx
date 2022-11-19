@@ -15,7 +15,7 @@ export enum AppRoutes {
     ABOUT = 'about',
     PROFILE = 'profile',
     ARTICLES = 'articles',
-    ARTICLE_DETAILS = 'articles',
+    ARTICLE_DETAILS = 'article',
     // last
     NOT_FOUND = 'not_found',
 }
