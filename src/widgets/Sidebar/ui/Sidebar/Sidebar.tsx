@@ -27,7 +27,7 @@ const NoMemoSidebar: FC<SidebarProps> = props => {
     ))
 
     return (
-        <div
+        <menu
             data-testid='sidebar'
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
@@ -46,7 +46,7 @@ const NoMemoSidebar: FC<SidebarProps> = props => {
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} short={collapsed} />
             </div>
-        </div>
+        </menu>
     )
 }
 

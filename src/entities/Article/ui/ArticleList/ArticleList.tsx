@@ -24,14 +24,6 @@ export const ArticleList: FC<articleListProps> = props => {
 
     const { t } = useTranslation()
 
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getSkeletons(view)}
-            </div>
-        )
-    }
-
     const renderArticle = (article: Article) => {
         return <ArticleListItem key={article.id} article={article} view={view} />
     }
@@ -39,6 +31,7 @@ export const ArticleList: FC<articleListProps> = props => {
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length ? articles.map(renderArticle) : null}
+            {isLoading && getSkeletons(view)}
         </div>
     )
 }

@@ -25,6 +25,7 @@ import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { useTranslation } from 'react-i18next'
 import { useInitEffect } from 'shared/lib/hooks/useInitEffect/useInitEffect'
 import { useParams } from 'react-router-dom'
+import { Page } from 'shared/ui/Page/Page'
 
 interface ProfilePageProps {
     className?: string
@@ -118,7 +119,7 @@ const ProfilePage: FC<ProfilePageProps> = props => {
 
     return (
         <DynamicModuleLoader reducers={reducersList} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length &&
                     validateErrors.map(err => (
@@ -142,7 +143,7 @@ const ProfilePage: FC<ProfilePageProps> = props => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     )
 }
