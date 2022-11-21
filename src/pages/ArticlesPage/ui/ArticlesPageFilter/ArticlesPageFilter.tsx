@@ -87,9 +87,9 @@ export const ArticlesPageFilter: FC<articlesPageFilterProps> = props => {
         (value: ArticleType) => {
             dispatch(articlePageActions.setType(value))
             dispatch(articlePageActions.setPage(1))
-            debounceFetchData()
+            fetchData()
         },
-        [dispatch, debounceFetchData],
+        [dispatch, fetchData],
     )
 
     return (
