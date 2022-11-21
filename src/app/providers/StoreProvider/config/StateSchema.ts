@@ -13,6 +13,7 @@ import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { AddCommentFormSchema } from 'features/AddCommentForm'
 import { LoginSchema } from 'features/AuthByUsername'
+import { ScrollRestorePositionSchema } from 'features/ScrollRestorePosition'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { ArticlePageSchema } from 'pages/ArticlesPage'
 import { NavigateOptions, To } from 'react-router-dom'
@@ -20,6 +21,7 @@ import { NavigateOptions, To } from 'react-router-dom'
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
+    scrollRestorePosition: ScrollRestorePositionSchema
 
     // Async reducers
     loginForm?: LoginSchema
@@ -33,7 +35,7 @@ export interface StateSchema {
 export interface ReducerManager {
     getReducerMap: () => ReducersMapObject<StateSchema>
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
-    add: (key: StateSchemaKey, reducer: Reducer) => void
+    add: (key: StateSchemaKey, reducer: Reducer) => boolean
     remove: (key: StateSchemaKey) => void
     // true - mounted
     getMountedReducers: () => MountedReducers
