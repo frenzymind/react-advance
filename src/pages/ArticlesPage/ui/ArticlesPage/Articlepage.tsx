@@ -11,11 +11,10 @@ import { useInitEffect } from 'shared/lib/hooks/useInitEffect/useInitEffect'
 import { Page } from 'shared/ui/Page/Page'
 import {
     getArticlePageIsLoading,
-    getArticlePageNum,
     getArticlePageView,
 } from '../../model/selectors/articlePageSelectors'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import {
     articlePageActions,
     articlePageReducer,
@@ -37,7 +36,6 @@ const Articlepage: FC<articlepageProps> = props => {
     const dispatch = useAppDispatch()
     const articles = useSelector(getArticles.selectAll)
     const isLoading = useSelector(getArticlePageIsLoading)
-    const page = useSelector(getArticlePageNum)
     const view = useSelector(getArticlePageView)
 
     const onLoadNextPart = useCallback(() => {
@@ -45,8 +43,7 @@ const Articlepage: FC<articlepageProps> = props => {
     }, [dispatch])
 
     useInitEffect(() => {
-        dispatch(articlePageActions.initState())
-        dispatch(fetchArticlesList({ page: page + 1 }))
+        dispatch(initArticlesPage())
     })
 
     const onChangeView = useCallback(
@@ -57,7 +54,7 @@ const Articlepage: FC<articlepageProps> = props => {
     )
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page
                 className={classNames(cls.Articlepage, {}, [className])}
                 onScrollEnd={onLoadNextPart}
