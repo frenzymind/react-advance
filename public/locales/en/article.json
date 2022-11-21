@@ -3,5 +3,18 @@
   "ARTICLE_ERROR": "Error loading article",
   "ARTICLES_COMMENTS_TITLE": "Comments",
   "READ_ARTICLE": "Read more",
-  "BACK_TO_ARTICLES": "Back to the list of articles"
+  "BACK_TO_ARTICLES": "Back to the list of articles",
+  "SORT_BY": "Sorting",
+  "SEARCH_PLACEHOLDER": "Search",
+  "SORT_ORDER_ASC": "ascending",
+  "SORT_ORDER_DESC": "descending",
+  "SORT_CREATED_AT": "date of creation",
+  "SORT_TITLE": "Title",
+  "SORT_VIEWS": "views",
+  "ORDER_BY": "Order",
+  "TABS_IT": "IT",
+  "TABS_SCIENCE": "Science",
+  "TABS_ECONOMICS": "Economic",
+  "TABS_ALL": "All",
+  "NO_ARTICLES": "Articles not found"
 }

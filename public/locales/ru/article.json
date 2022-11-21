@@ -3,5 +3,18 @@
   "ARTICLE_ERROR": "Ошибка при загрузки статьи",
   "ARTICLES_COMMENTS_TITLE": "Комментарии",
   "READ_ARTICLE": "Читать далее",
-  "BACK_TO_ARTICLES": "Назад к списку статей"
+  "BACK_TO_ARTICLES": "Назад к списку статей",
+  "SORT_BY": "Сортировка",
+  "SEARCH_PLACEHOLDER": "Поиск",
+  "SORT_ORDER_ASC": "возрастанию",
+  "SORT_ORDER_DESC": "убыванию",
+  "SORT_CREATED_AT": "Дата создания",
+  "SORT_TITLE": "Названию",
+  "SORT_VIEWS": "Просмотры",
+  "ORDER_BY": "Порядок",
+  "TABS_IT": "ИТ",
+  "TABS_SCIENCE": "Наука",
+  "TABS_ECONOMICS": "Экономика",
+  "TABS_ALL": "Все",
+  "NO_ARTICLES": "Статьи не найдены"
 }

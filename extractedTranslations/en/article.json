@@ -3,5 +3,18 @@
   "ARTICLE_ERROR": "",
   "ARTICLE_NOT_FOUND": "",
   "BACK_TO_ARTICLES": "",
-  "READ_ARTICLE": ""
+  "NO_ARTICLES": "",
+  "ORDER_BY": "",
+  "READ_ARTICLE": "",
+  "SEARCH_PLACEHOLDER": "",
+  "SORT_BY": "",
+  "SORT_CREATED_AT": "",
+  "SORT_ORDER_ASC": "",
+  "SORT_ORDER_DESC": "",
+  "SORT_TITLE": "",
+  "SORT_VIEWS": "",
+  "TABS_ALL": "",
+  "TABS_ECONOMICS": "",
+  "TABS_IT": "",
+  "TABS_SCIENCE": ""
 }

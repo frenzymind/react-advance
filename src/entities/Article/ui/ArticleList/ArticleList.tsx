@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
+import { Text, TextSize } from 'shared/ui/Text/Text'
 
 interface articleListProps {
     className?: string
@@ -22,10 +23,18 @@ const getSkeletons = (view: ArticleView) => {
 export const ArticleList: FC<articleListProps> = props => {
     const { className, articles, isLoading, view = ArticleView.SMALL } = props
 
-    const { t } = useTranslation()
+    const { t } = useTranslation('article')
 
     const renderArticle = (article: Article) => {
         return <ArticleListItem key={article.id} article={article} view={view} />
+    }
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                <Text title={t('NO_ARTICLES')} size={TextSize.L} />
+            </div>
+        )
     }
 
     return (

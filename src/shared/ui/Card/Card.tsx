@@ -5,13 +5,19 @@ import type { FC, HTMLAttributes, ReactNode } from 'react'
 interface cardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string
     children: ReactNode
+    theme?: CardTheme
+}
+
+export enum CardTheme {
+    NORMAL = 'normal',
+    OUTLINED = 'outlined',
 }
 
 export const Card: FC<cardProps> = props => {
-    const { className, children, ...otherProps } = props
+    const { className, children, theme = CardTheme.NORMAL, ...otherProps } = props
 
     return (
-        <div {...otherProps} className={classNames(cls.Card, {}, [className])}>
+        <div {...otherProps} className={classNames(cls.Card, {}, [className, cls[theme]])}>
             {children}
         </div>
     )

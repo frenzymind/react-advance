@@ -1,6 +1,8 @@
 import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article'
+import { ArticlesPageFilter } from 'pages/ArticlesPage/ui/ArticlesPageFilter/ArticlesPageFilter'
 import { FC, memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
     DynamicModuleLoader,
@@ -37,21 +39,17 @@ const Articlepage: FC<articlepageProps> = props => {
     const articles = useSelector(getArticles.selectAll)
     const isLoading = useSelector(getArticlePageIsLoading)
     const view = useSelector(getArticlePageView)
+    const [searchParams] = useSearchParams()
+
+    console.log(searchParams)
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage())
     }, [dispatch])
 
     useInitEffect(() => {
-        dispatch(initArticlesPage())
+        dispatch(initArticlesPage(searchParams))
     })
-
-    const onChangeView = useCallback(
-        (view: ArticleView) => {
-            dispatch(articlePageActions.setView(view))
-        },
-        [dispatch],
-    )
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
@@ -59,8 +57,13 @@ const Articlepage: FC<articlepageProps> = props => {
                 className={classNames(cls.Articlepage, {}, [className])}
                 onScrollEnd={onLoadNextPart}
             >
-                <ArticleViewSelector onViewClick={onChangeView} view={view} />
-                <ArticleList isLoading={isLoading} view={view} articles={articles} />
+                <ArticlesPageFilter />
+                <ArticleList
+                    isLoading={isLoading}
+                    view={view}
+                    articles={articles}
+                    className={cls.list}
+                />
             </Page>
         </DynamicModuleLoader>
     )

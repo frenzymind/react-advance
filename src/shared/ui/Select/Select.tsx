@@ -2,27 +2,27 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames'
 import cls from './Select.module.scss'
 import { ChangeEvent, FC, useMemo } from 'react'
 
-export interface SelectOption {
-    value: string
+export interface SelectOption<T extends string> {
+    value: T
     content: string
 }
 
-interface SelectProps {
+interface SelectProps<T extends string> {
     className?: string
     label?: string
-    options?: SelectOption[]
-    value?: string
+    options?: SelectOption<T>[]
+    value?: T
     readOnly?: boolean
-    onChange?: (value: string) => void
+    onChange?: (value: T) => void
 }
 
-export const Select: FC<SelectProps> = props => {
+export const Select = <T extends string>(props: SelectProps<T>) => {
     const { className, label, options, value, readOnly, onChange } = props
 
     const mods: Mods = {}
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChange?.(e.target.value)
+        onChange?.(e.target.value as T)
     }
 
     const optionList = useMemo(() => {
