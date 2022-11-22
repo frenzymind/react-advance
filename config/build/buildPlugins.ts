@@ -32,9 +32,9 @@ export function buildPlugins({
         }),
     ]
 
-    if (isDev) {
-        plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }))
-    }
+    // if (isDev) {
+    //     plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }))
+    // }
 
     if (analyze) {
         plugins.push(
