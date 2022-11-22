@@ -20,5 +20,6 @@
   "COUNTRY_SELECT": "Выберите страну",
   "COOMENT_ABSENT": "Ещё никто не оставил комментарий",
   "ADD_COMMENT_TEXT_PLACEHOLDER": "Введите текст комментария",
-  "ADD_COMMENT_SEND": "Отправить"
+  "ADD_COMMENT_SEND": "Отправить",
+  "CREATE_ARTICLE": "Создать статью"
 }

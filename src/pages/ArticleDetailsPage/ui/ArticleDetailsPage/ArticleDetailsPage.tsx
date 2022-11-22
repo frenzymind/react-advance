@@ -1,11 +1,11 @@
 import { ArticleDetails, ArticleList } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { AddCommentForm } from 'features/AddCommentForm'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { FC, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { useParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
     DynamicModuleLoader,
@@ -13,7 +13,6 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitEffect } from 'shared/lib/hooks/useInitEffect/useInitEffect'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { Page } from 'widgets/Page/Page'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
@@ -46,7 +45,6 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = props => {
     const recommend = useSelector(getArticleRecommend.selectAll)
     const recommendIsLoading = useSelector(getArticleRecommendIsLoading)
     const dispatch = useAppDispatch()
-    const navigate = useNavigate()
 
     useInitEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
@@ -60,10 +58,6 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = props => {
         [dispatch],
     )
 
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles)
-    }, [navigate])
-
     if (!id) {
         return (
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -75,9 +69,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = props => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('BACK_TO_ARTICLES')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}

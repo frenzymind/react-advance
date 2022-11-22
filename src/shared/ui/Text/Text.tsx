@@ -4,6 +4,7 @@ import type { FC } from 'react'
 
 export enum TextTheme {
     PRIMARY = 'primary',
+    INVERTED = 'inverted',
     ERROR = 'error',
 }
 
