@@ -14,7 +14,7 @@ import { UserSchema } from 'entities/User'
 import { AddCommentFormSchema } from 'features/AddCommentForm'
 import { LoginSchema } from 'features/AuthByUsername'
 import { ScrollRestorePositionSchema } from 'features/ScrollRestorePosition'
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { ArticlDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { ArticlePageSchema } from 'pages/ArticlesPage'
 import { NavigateOptions, To } from 'react-router-dom'
 
@@ -27,7 +27,9 @@ export interface StateSchema {
     loginForm?: LoginSchema
     profile?: ProfileSchema
     articleDetails?: articleDetailsSchema
-    articleDetailsComments?: ArticleDetailsCommentsSchema
+    // articleDetailsComments?: ArticleDetailsCommentsSchema
+    // articleDetailsRecommend?: articleDetailsRecommendSchema
+    articleDetailsPage?: ArticlDetailsPageSchema
     addCommentForm?: AddCommentFormSchema
     articlesPage?: ArticlePageSchema
 }

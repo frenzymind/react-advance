@@ -16,5 +16,6 @@
   "TABS_SCIENCE": "Science",
   "TABS_ECONOMICS": "Economic",
   "TABS_ALL": "All",
-  "NO_ARTICLES": "Articles not found"
+  "NO_ARTICLES": "Articles not found",
+  "ARTICLES_RECOMMEND": "Recommended"
 }

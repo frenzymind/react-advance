@@ -1,17 +1,18 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ArticleList.module.scss'
-import type { FC } from 'react'
+import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
+import type { FC, HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { Text, TextSize } from 'shared/ui/Text/Text'
 import { Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
-import { Text, TextSize } from 'shared/ui/Text/Text'
+import cls from './ArticleList.module.scss'
 
 interface articleListProps {
     className?: string
     articles: Article[]
     isLoading?: boolean
     view?: ArticleView
+    target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => {
@@ -21,12 +22,12 @@ const getSkeletons = (view: ArticleView) => {
 }
 
 export const ArticleList: FC<articleListProps> = props => {
-    const { className, articles, isLoading, view = ArticleView.SMALL } = props
+    const { className, articles, isLoading, target, view = ArticleView.SMALL } = props
 
     const { t } = useTranslation('article')
 
     const renderArticle = (article: Article) => {
-        return <ArticleListItem key={article.id} article={article} view={view} />
+        return <ArticleListItem key={article.id} article={article} view={view} target={target} />
     }
 
     if (!isLoading && !articles.length) {
