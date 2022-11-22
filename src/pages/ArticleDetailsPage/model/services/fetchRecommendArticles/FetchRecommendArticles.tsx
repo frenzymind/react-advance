@@ -11,6 +11,7 @@ export const fetchRecommendArticles = createAsyncThunk<Article[], void, ThunkCon
             const response = await extra.api.get<Article[]>('/articles', {
                 params: {
                     _limit: 4,
+                    _expand: 'user',
                 },
             })
 
