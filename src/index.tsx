@@ -7,13 +7,6 @@ import 'shared/config/i18n/i18n'
 import { ErrorBoundary } from 'shared/hoc/ErrorBoundary'
 import { StoreProvider } from 'app/providers/StoreProvider'
 
-;(window as any).$RefreshReg$ = () => {
-    /**/
-}
-;(window as any).$RefreshSig$ = () => () => {
-    /**/
-}
-
 render(
     <BrowserRouter>
         <StoreProvider>
