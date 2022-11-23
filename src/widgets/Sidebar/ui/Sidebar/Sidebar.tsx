@@ -28,7 +28,7 @@ const NoMemoSidebar: FC<SidebarProps> = props => {
     ))
 
     return (
-        <menu
+        <aside
             data-testid='sidebar'
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
@@ -42,14 +42,14 @@ const NoMemoSidebar: FC<SidebarProps> = props => {
             >
                 {collapsed ? '>' : '<'}
             </Button>
-            <VStack className={cls.items} gap='8'>
+            <VStack role='navigation' className={cls.items} gap='8'>
                 {itemsList}
             </VStack>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} short={collapsed} />
             </div>
-        </menu>
+        </aside>
     )
 }
 
