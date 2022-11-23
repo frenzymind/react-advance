@@ -1,5 +1,4 @@
-import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article'
-import { ArticlesPageFilter } from 'pages/ArticlesPage/ui/ArticlesPageFilter/ArticlesPageFilter'
+import { ArticleList } from 'entities/Article'
 import { FC, memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
@@ -17,11 +16,8 @@ import {
 } from '../../model/selectors/articlePageSelectors'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
-import {
-    articlePageActions,
-    articlePageReducer,
-    getArticles,
-} from '../../model/slice/articlePageSlice'
+import { articlePageReducer, getArticles } from '../../model/slice/articlePageSlice'
+import { ArticlesPageFilter } from '../ArticlesPageFilter/ArticlesPageFilter'
 import cls from './Articlepage.module.scss'
 
 interface articlepageProps {

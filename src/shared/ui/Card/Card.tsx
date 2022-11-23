@@ -17,6 +17,7 @@ export const Card: FC<cardProps> = props => {
     const { className, children, theme = CardTheme.NORMAL, ...otherProps } = props
 
     return (
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <div {...otherProps} className={classNames(cls.Card, {}, [className, cls[theme]])}>
             {children}
         </div>

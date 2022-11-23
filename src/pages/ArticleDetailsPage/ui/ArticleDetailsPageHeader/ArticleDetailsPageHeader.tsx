@@ -1,13 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ArticleDetailsPageHeader.module.scss'
+import { getArticleDetailsData } from 'entities/Article'
 import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { useSelector } from 'react-redux'
-import { getUserAuthData } from 'entities/User'
-import { getArticleDetailsData } from 'entities/Article'
+import { HStack } from 'shared/ui/Stack'
 import { getCanEditArticle } from '../../model/selectors/article'
 
 interface articleDetailsPageHeaderProps {
@@ -19,7 +18,6 @@ export const ArticleDetailsPageHeader: FC<articleDetailsPageHeaderProps> = props
 
     const { t } = useTranslation('article')
     const navigate = useNavigate()
-    const userData = useSelector(getUserAuthData)
     const article = useSelector(getArticleDetailsData)
 
     const canEdit = useSelector(getCanEditArticle)
@@ -33,15 +31,15 @@ export const ArticleDetailsPageHeader: FC<articleDetailsPageHeaderProps> = props
     }, [article?.id, navigate])
 
     return (
-        <div className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
+        <HStack max justify='between' className={classNames('', {}, [className])}>
             <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                 {t('BACK_TO_ARTICLES')}
             </Button>
             {canEdit && (
-                <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle} className={cls.editBtn}>
+                <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle} className={''}>
                     {t('ARTICLE_EDIT')}
                 </Button>
             )}
-        </div>
+        </HStack>
     )
 }

@@ -21,6 +21,7 @@ export const AppLink: FC<AppLinkProps> = props => {
     return (
         <Link
             // https://zhenyong.github.io/react/docs/transferring-props.html#consuming-and-transferring-the-same-prop
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
             to={to}
             className={classNames(cls.AppLink, {}, [className, cls[theme]])}

@@ -1,23 +1,21 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './AddCommentForm.module.scss'
 import { FC, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Input } from 'shared/ui/Input/Input'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
-import {
-    getAddCommentFormError,
-    getAddCommentFormText,
-} from '../../model/selectors/addCommentFormSelectors'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import {
-    addCommentFormActions,
-    addCommentFormReducer,
-} from '../../model/slices/addCommentFormSlice'
+import { classNames } from 'shared/lib/classNames/classNames'
 import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Input } from 'shared/ui/Input/Input'
+import { HStack } from 'shared/ui/Stack'
+import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors'
+import {
+    addCommentFormActions,
+    addCommentFormReducer,
+} from '../../model/slices/addCommentFormSlice'
+import cls from './AddCommentForm.module.scss'
 
 export interface addCommentFormProps {
     className?: string
@@ -29,7 +27,7 @@ const AddCommentForm: FC<addCommentFormProps> = props => {
     const { t } = useTranslation()
     const dispatch = useAppDispatch()
     const text = useSelector(getAddCommentFormText)
-    const error = useSelector(getAddCommentFormError)
+    // const error = useSelector(getAddCommentFormError)
 
     const omCommentTextChange = useCallback(
         (value: string) => {
@@ -49,7 +47,11 @@ const AddCommentForm: FC<addCommentFormProps> = props => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack
+                justify='between'
+                max
+                className={classNames(cls.AddCommentForm, {}, [className])}
+            >
                 <Input
                     className={cls.input}
                     placeholder={t('ADD_COMMENT_TEXT_PLACEHOLDER')}
@@ -59,7 +61,7 @@ const AddCommentForm: FC<addCommentFormProps> = props => {
                 <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
                     {t('ADD_COMMENT_SEND')}
                 </Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     )
 }

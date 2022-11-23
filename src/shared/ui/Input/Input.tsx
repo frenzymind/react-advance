@@ -64,6 +64,7 @@ export const Input = memo(function Input(props: InputProps) {
             {placeholder && <div className={cls.placeholder}>{`${placeholder}>`}</div>}
             <div className={cls.caretWrapper}>
                 <input
+                    // eslint-disable-next-line react/jsx-props-no-spreading
                     {...otherProps}
                     ref={ref}
                     type={type}
