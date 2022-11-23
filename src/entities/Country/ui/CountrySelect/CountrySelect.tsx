@@ -32,6 +32,7 @@ export const CountrySelect: FC<CountrySelectProps> = props => {
             items={countryOptions}
             onChange={onChnageHandler}
             readonly={readOnly}
+            direction='top right'
         />
     )
 }

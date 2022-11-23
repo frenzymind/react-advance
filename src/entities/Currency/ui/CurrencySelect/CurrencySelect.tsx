@@ -37,6 +37,7 @@ export const CurrencySelect: FC<CurrencySelectProps> = props => {
             items={currencyOptions}
             onChange={onChnageHandler}
             readonly={readOnly}
+            direction='top right'
         />
     )
 

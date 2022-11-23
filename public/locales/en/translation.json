@@ -21,5 +21,6 @@
   "COOMENT_ABSENT": "No one has left a comment yet",
   "ADD_COMMENT_TEXT_PLACEHOLDER": "Enter comment text",
   "ADD_COMMENT_SEND": "Send",
-  "CREATE_ARTICLE": "Create article"
+  "CREATE_ARTICLE": "Create article",
+  "NAVBAR_USER_PROFILE": "Profile"
 }

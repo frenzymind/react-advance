@@ -21,5 +21,6 @@
   "COOMENT_ABSENT": "Ещё никто не оставил комментарий",
   "ADD_COMMENT_TEXT_PLACEHOLDER": "Введите текст комментария",
   "ADD_COMMENT_SEND": "Отправить",
-  "CREATE_ARTICLE": "Создать статью"
+  "CREATE_ARTICLE": "Создать статью",
+  "NAVBAR_USER_PROFILE": "Профиль"
 }
