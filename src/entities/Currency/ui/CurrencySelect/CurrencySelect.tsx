@@ -1,8 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames'
 import { FC, useCallback } from 'react'
-import { Select } from 'shared/ui/Select/Select'
-import { Currency } from '../../model/types/currency'
 import { useTranslation } from 'react-i18next'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
+import { Currency } from '../../model/types/currency'
 
 interface CurrencySelectProps {
     className?: string
@@ -30,13 +29,25 @@ export const CurrencySelect: FC<CurrencySelectProps> = props => {
     )
 
     return (
-        <Select
-            className={classNames('', {}, [className])}
-            label={t('CURRENCY_SELECT')}
+        <ListBox
+            className={className}
             value={value}
+            defaultValue={t('CURRENCY_SELECT')}
+            label={t('COUNTRY_SELECT')}
+            items={currencyOptions}
             onChange={onChnageHandler}
-            options={currencyOptions}
-            readOnly={readOnly}
+            readonly={readOnly}
         />
     )
+
+    // return (
+    //     <Select
+    //         className={classNames('', {}, [className])}
+    //         label={t('CURRENCY_SELECT')}
+    //         value={value}
+    //         onChange={onChnageHandler}
+    //         options={currencyOptions}
+    //         readOnly={readOnly}
+    //     />
+    // )
 }

@@ -1,8 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames'
 import { FC, useCallback } from 'react'
-import { Select } from 'shared/ui/Select/Select'
-import { Country } from '../../model/types/country'
 import { useTranslation } from 'react-i18next'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
+import { Country } from '../../model/types/country'
 
 interface CountrySelectProps {
     className?: string
@@ -25,13 +24,14 @@ export const CountrySelect: FC<CountrySelectProps> = props => {
     )
 
     return (
-        <Select
-            className={classNames('', {}, [className])}
-            label={t('COUNTRY_SELECT')}
+        <ListBox
+            className={className}
             value={value}
+            defaultValue={t('COUNTRY_SELECT')}
+            label={t('COUNTRY_SELECT')}
+            items={countryOptions}
             onChange={onChnageHandler}
-            options={countryOptions}
-            readOnly={readOnly}
+            readonly={readOnly}
         />
     )
 }
