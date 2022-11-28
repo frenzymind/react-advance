@@ -18,5 +18,6 @@
   "TABS_ALL": "Все",
   "NO_ARTICLES": "Статьи не найдены",
   "ARTICLES_RECOMMEND": "Рекомендовано",
-  "ARTICLE_EDIT": "Редактировать"
+  "ARTICLE_EDIT": "Редактировать",
+  "ARTICLE_LIST_LOAD_ERROR": "Ошибка при загрузке статей"
 }

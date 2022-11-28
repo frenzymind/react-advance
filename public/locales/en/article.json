@@ -18,5 +18,6 @@
   "TABS_ALL": "All",
   "NO_ARTICLES": "Articles not found",
   "ARTICLES_RECOMMEND": "Recommended",
-  "ARTICLE_EDIT": "Edit"
+  "ARTICLE_EDIT": "Edit",
+  "ARTICLE_LIST_LOAD_ERROR": "Error load articles list"
 }

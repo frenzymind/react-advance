@@ -15,5 +15,6 @@
   "INCORRECT_AGE": "Неверный возраст",
   "INCORRECT_COUNTRY": "Ошибка в стране",
   "INCORRECT_DATA": "Неверные данные",
-  "NO_DATA": "данные пусты"
+  "NO_DATA": "данные пусты",
+  "NO_PROFILE": "Профиль не найден"
 }

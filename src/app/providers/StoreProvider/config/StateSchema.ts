@@ -9,19 +9,21 @@ import {
 import { AxiosInstance } from 'axios'
 import { articleDetailsSchema } from 'entities/Article/model/types/articleDetailsSchema'
 import { CounterSchema } from 'entities/Counter'
-import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { AddCommentFormSchema } from 'features/AddCommentForm'
 import { LoginSchema } from 'features/AuthByUsername'
+import { ProfileSchema } from 'features/EditableProfileCard'
 import { ScrollRestorePositionSchema } from 'features/ScrollRestorePosition'
 import { ArticlDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { ArticlePageSchema } from 'pages/ArticlesPage'
 import { NavigateOptions, To } from 'react-router-dom'
+import { rtkApi } from 'shared/api/rtkApi'
 
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
     scrollRestorePosition: ScrollRestorePositionSchema
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
     // Async reducers
     loginForm?: LoginSchema

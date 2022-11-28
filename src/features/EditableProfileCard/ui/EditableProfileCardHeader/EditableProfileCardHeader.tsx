@@ -1,10 +1,8 @@
-import {
-    getProfileData,
-    getProfileReadonly,
-    profileActions,
-    updateProfileData,
-} from 'entities/Profile'
 import { getUserAuthData } from 'entities/User'
+import { getProfileData } from '../..//model/selectors/getProfileData/getProfileData'
+import { getProfileReadonly } from '../..//model/selectors/getProfileReadonly/getProfileReadonly'
+import { updateProfileData } from '../..//model/services/updateProfileData/updateProfileData'
+import { profileActions } from '../..//model/slice/profileSlice'
 import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'

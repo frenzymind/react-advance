@@ -15,5 +15,6 @@
   "INCORRECT_AGE": "Wrong age",
   "INCORRECT_COUNTRY": "country error",
   "INCORRECT_DATA": "Wrong data",
-  "NO_DATA": "data is empty"
+  "NO_DATA": "data is empty",
+  "NO_PROFILE": "Profile not found"
 }

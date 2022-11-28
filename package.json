@@ -8,6 +8,7 @@
         "start:dev": "concurrently \"npm start\" \"npm run start:dev:server\"",
         "start:dev:server": "node ./json-server/index.js",
         "build:prod": "webpack --env mode=production apiUrl=https://expert-react-prod-server.vercel.app/",
+        "build:prod:analyze": "webpack --env mode=production --env analyze=1 apiUrl=https://expert-react-prod-server.vercel.app/",
         "build:dev": "webpack --env mode=development",
         "lint:ts": "eslint src/**/*.{ts,tsx}",
         "lint:ts:fix": "eslint src/**/*.{ts,tsx} --fix",
