@@ -26,6 +26,7 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, Thun
             thunkAPI.dispatch(userActions.setAuthData(response.data))
 
             thunkAPI.extra.navigate?.('/about')
+            // thunkAPI.fulfillWithValue('asd', 'asd')
             return response.data
         } catch (error) {
             console.log(error)

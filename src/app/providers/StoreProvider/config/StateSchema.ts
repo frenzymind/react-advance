@@ -56,9 +56,10 @@ export interface ThunkExtraArg {
     navigate?: (to: To, options?: NavigateOptions) => void
 }
 
-export interface ThunkConfig<T> {
+export interface ThunkConfig<T, K = unknown> {
     rejectValue: T
     extra: ThunkExtraArg
     dispatch?: Dispatch
     state: StateSchema
+    fulfilledMeta: K
 }
