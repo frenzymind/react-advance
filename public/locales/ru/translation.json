@@ -22,5 +22,8 @@
   "ADD_COMMENT_TEXT_PLACEHOLDER": "Введите текст комментария",
   "ADD_COMMENT_SEND": "Отправить",
   "CREATE_ARTICLE": "Создать статью",
-  "NAVBAR_USER_PROFILE": "Профиль"
+  "NAVBAR_USER_PROFILE": "Профиль",
+  "ADMIN_PAGE": "Страница админа",
+  "NAVBAR_ADMIN": "Админка",
+  "FORBIDDEN_PAGE": "Доступ запрещён"
 }

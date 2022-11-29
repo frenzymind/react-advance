@@ -123,6 +123,7 @@ const NoMemoEditableProfileCard = (props: EditableProfileCardProps) => {
                             theme={TextTheme.ERROR}
                             text={validateErrorTranslate[err]}
                             key={err}
+                            data-testid='EditableProfileCard.Error'
                         />
                     ))}
                 <ProfileCard

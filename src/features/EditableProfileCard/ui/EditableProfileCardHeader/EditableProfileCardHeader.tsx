@@ -3,7 +3,7 @@ import { getProfileData } from '../..//model/selectors/getProfileData/getProfile
 import { getProfileReadonly } from '../..//model/selectors/getProfileReadonly/getProfileReadonly'
 import { updateProfileData } from '../..//model/services/updateProfileData/updateProfileData'
 import { profileActions } from '../..//model/slice/profileSlice'
-import { FC, useCallback } from 'react'
+import { FC, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -16,7 +16,7 @@ interface ProfilePageHeaderProps {
     className?: string
 }
 
-export const ProfilePageHeader: FC<ProfilePageHeaderProps> = props => {
+const NoMemoProfilePageHeader: FC<ProfilePageHeaderProps> = props => {
     const { className } = props
     const { t } = useTranslation('profile')
     const dispatch = useAppDispatch()
@@ -33,6 +33,7 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = props => {
     }, [dispatch])
 
     const onSave = useCallback(() => {
+        console.log('onSave')
         dispatch(updateProfileData())
     }, [dispatch])
 
@@ -44,15 +45,27 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = props => {
             {canEdit && (
                 <div>
                     {readOnly ? (
-                        <Button theme={ButtonTheme.OUTLINE} onClick={onEdit}>
+                        <Button
+                            theme={ButtonTheme.OUTLINE}
+                            onClick={onEdit}
+                            data-testid={'EditableProfileCardHeader.EditButton'}
+                        >
                             {t('EDIT_PROFILE')}
                         </Button>
                     ) : (
                         <HStack gap='8'>
-                            <Button theme={ButtonTheme.OUTLINE_RED} onClick={onEditCancel}>
+                            <Button
+                                theme={ButtonTheme.OUTLINE_RED}
+                                onClick={onEditCancel}
+                                data-testid={'EditableProfileCardHeader.CancelButton'}
+                            >
                                 {t('CANCEL_EDIT_PROFILE')}
                             </Button>
-                            <Button theme={ButtonTheme.OUTLINE} onClick={onSave}>
+                            <Button
+                                theme={ButtonTheme.OUTLINE}
+                                onClick={onSave}
+                                data-testid={'EditableProfileCardHeader.SaveButton'}
+                            >
                                 {t('SAVE_PROFILE')}
                             </Button>
                         </HStack>
@@ -62,3 +75,5 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = props => {
         </HStack>
     )
 }
+
+export const ProfilePageHeader = memo(NoMemoProfilePageHeader)

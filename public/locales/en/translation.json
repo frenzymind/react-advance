@@ -22,5 +22,8 @@
   "ADD_COMMENT_TEXT_PLACEHOLDER": "Enter comment text",
   "ADD_COMMENT_SEND": "Send",
   "CREATE_ARTICLE": "Create article",
-  "NAVBAR_USER_PROFILE": "Profile"
+  "NAVBAR_USER_PROFILE": "Profile",
+  "ADMIN_PAGE": "Admin Page",
+  "NAVBAR_ADMIN": "admin",
+  "FORBIDDEN_PAGE": "Forbidden"
 }

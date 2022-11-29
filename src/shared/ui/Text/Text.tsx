@@ -28,6 +28,7 @@ interface TextProps {
     theme?: TextTheme
     align?: TextAlighn
     size?: TextSize
+    'data-testid'?: string
 }
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
@@ -44,14 +45,23 @@ export const Text: FC<TextProps> = props => {
         theme = TextTheme.PRIMARY,
         align = TextAlighn.LEFT,
         size = TextSize.M,
+        'data-testid': dataTestId = '',
     } = props
 
     const HeaderTag = mapSizeToHeaderTag[size]
 
     return (
         <div className={classNames(cls.text, {}, [className, cls[theme], cls[align], cls[size]])}>
-            {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
-            {text && <p className={cls.text}>{text}</p>}
+            {title && (
+                <HeaderTag className={cls.title} data-testid={`${dataTestId}.Header`}>
+                    {title}
+                </HeaderTag>
+            )}
+            {text && (
+                <p className={cls.text} data-testid={`${dataTestId}.Paragraph`}>
+                    {text}
+                </p>
+            )}
         </div>
     )
 }

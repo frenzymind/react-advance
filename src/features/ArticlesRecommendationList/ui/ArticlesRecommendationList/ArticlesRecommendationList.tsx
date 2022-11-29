@@ -15,7 +15,7 @@ const NoMemoArticlesRecommendationList = (props: ArticlesRecommendationListProps
     const { t } = useTranslation()
     const { isLoading, data: articles, error } = useArticlesRecommendationList(3)
 
-    if (isLoading || error) {
+    if (isLoading || error || !articles) {
         return null
     }
 
