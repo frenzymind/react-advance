@@ -27,7 +27,7 @@ export const CommentList: FC<commentListProps> = props => {
     }
 
     return (
-        <VStack gap='16' className={classNames('', {}, [className])}>
+        <VStack gap='16' max className={classNames('', {}, [className])}>
             {comments?.length ? (
                 comments.map((comment: IComment) => (
                     <CommentCard key={comment.id} comment={comment} isLoading={isLoading} />
