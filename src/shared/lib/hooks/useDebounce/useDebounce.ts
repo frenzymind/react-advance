@@ -5,7 +5,8 @@ export function useDebounce(cb: (...args: any[]) => void, delay: number) {
     const timerRef = useRef() as MutableRefObject<NodeJS.Timeout>
 
     return useCallback(
-        (...args) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (...args: any) => {
             if (timerRef.current) {
                 clearTimeout(timerRef.current)
             }

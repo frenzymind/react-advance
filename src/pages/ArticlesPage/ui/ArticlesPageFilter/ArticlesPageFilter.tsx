@@ -5,7 +5,7 @@ import {
     ArticleView,
     ArticleViewSelector,
 } from 'entities/Article'
-import { ArticleType } from 'entities/Article/model/types/article'
+import { ArticleType } from 'entities/Article/model/constants/consts'
 import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'

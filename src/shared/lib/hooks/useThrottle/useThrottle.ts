@@ -5,7 +5,8 @@ export function useThrottle(cb: (...args: any[]) => void, delay: number) {
     const throttleRef = useRef(false)
 
     return useCallback(
-        (...args) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (...args: any) => {
             if (!throttleRef.current) {
                 cb(...args)
                 throttleRef.current = true

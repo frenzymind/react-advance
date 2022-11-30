@@ -31,14 +31,6 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = props => {
     const { t } = useTranslation('article')
     const { id } = useParams<{ id: string }>()
 
-    if (!id) {
-        return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('ARTICLE_NOT_FOUND')}
-            </Page>
-        )
-    }
-
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
