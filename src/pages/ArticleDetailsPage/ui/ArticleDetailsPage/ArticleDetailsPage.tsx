@@ -28,7 +28,6 @@ const reducers: ReducersList = {
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = props => {
     const { className } = props
 
-    const { t } = useTranslation('article')
     const { id } = useParams<{ id: string }>()
 
     return (
