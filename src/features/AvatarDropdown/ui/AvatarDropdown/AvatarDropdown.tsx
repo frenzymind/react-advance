@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './AvatarDropdown.module.scss'
 import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Dropdown } from 'shared/ui/Popups'
@@ -34,7 +33,7 @@ export const AvatarDropdown: FC<avatarDropdownProps> = props => {
 
     return (
         <Dropdown
-            className={classNames(cls.AvatarDropdown, {}, [className])}
+            className={classNames('', {}, [className])}
             direction='bottom left'
             items={[
                 ...(isAdminPanelAvailable
