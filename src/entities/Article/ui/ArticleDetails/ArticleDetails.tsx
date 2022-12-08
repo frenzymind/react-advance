@@ -1,32 +1,32 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleDetails.module.scss'
 import { FC, memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
     DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
     getArticleDetailsIsLoading,
     getArticleDetailsError,
     getArticleDetailsData,
 } from '../../model/selectors/articleDetails'
-import { Text, TextAlighn, TextSize } from 'shared/ui/Text/Text'
-import { Skeleton } from 'shared/Skeleton/Skeleton'
-import { Avatar } from 'shared/ui/Avatar/Avatar'
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
-import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
-import { Icon } from 'shared/ui/Icon/Icon'
+import { Text, TextAlighn, TextSize } from '@/shared/ui/Text/Text'
+import { Skeleton } from '@/shared/Skeleton/Skeleton'
+import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
+import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
+import { Icon } from '@/shared/ui/Icon/Icon'
 import { ArticleBlock } from '../../model/types/article'
 import { ArticleBlockType } from '../../model/constants/consts'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { HStack, VStack } from 'shared/ui/Stack'
+import { HStack, VStack } from '@/shared/ui/Stack'
 
 interface articleDetailsProps {
     className?: string

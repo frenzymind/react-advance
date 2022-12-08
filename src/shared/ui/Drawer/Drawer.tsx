@@ -1,7 +1,7 @@
 import { memo, ReactNode, useCallback, useEffect } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { useAnimationLibs } from 'shared/lib/components/AnimationProvider'
-import { useTheme } from 'shared/providers/ThemeProvider'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { useAnimationLibs } from '@/shared/lib/components/AnimationProvider'
+import { useTheme } from '@/shared/providers/ThemeProvider'
 import { Overlay } from '../Overlay/Overlay'
 import { Portal } from '../Portal/Portal'
 import cls from './Drawer.module.scss'
@@ -21,7 +21,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
     const { Spring, Gesture } = useAnimationLibs()
     const [{ y }, api] = Spring.useSpring(() => ({ y: height }))
     const { theme } = useTheme()
-    const { className, children, onClose, isOpen, lazy } = props
+    const { className, children, onClose, isOpen } = props
 
     const openDrawer = useCallback(() => {
         api.start({ y: 0, immediate: false })
@@ -77,6 +77,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
                 <Spring.a.div
                     className={cls.sheet}
                     style={{ display, bottom: `calc(-100vh + ${height - 100}px)`, y }}
+                    // eslint-disable-next-line react/jsx-props-no-spreading
                     {...bind()}
                 >
                     {children}

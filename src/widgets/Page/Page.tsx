@@ -1,15 +1,15 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Page.module.scss'
 import { FC, MutableRefObject, ReactNode, UIEvent, useRef } from 'react'
-import { useInfinitiScroll } from 'shared/lib/hooks/useInfinitiScroll/useInfinitiScroll'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { scrollActions } from 'features/ScrollRestorePosition'
+import { useInfinitiScroll } from '@/shared/lib/hooks/useInfinitiScroll/useInfinitiScroll'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { scrollActions } from '@/features/ScrollRestorePosition'
 import { useLocation } from 'react-router-dom'
-import { useInitEffect } from 'shared/lib/hooks/useInitEffect/useInitEffect'
+import { useInitEffect } from '@/shared/lib/hooks/useInitEffect/useInitEffect'
 import { useSelector } from 'react-redux'
-import { getScrollPositionByPath } from 'features/ScrollRestorePosition/model/selectors/scrollRestorePositionSelector'
-import { StateSchema } from 'app/providers/StoreProvider'
-import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle'
+import { getScrollPositionByPath } from '@/features/ScrollRestorePosition/model/selectors/scrollRestorePositionSelector'
+import { StateSchema } from '@/app/providers/StoreProvider'
+import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
 
 interface pageProps {
     className?: string
