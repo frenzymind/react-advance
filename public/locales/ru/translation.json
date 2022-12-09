@@ -25,5 +25,8 @@
   "NAVBAR_USER_PROFILE": "Профиль",
   "ADMIN_PAGE": "Страница админа",
   "NAVBAR_ADMIN": "Админка",
-  "FORBIDDEN_PAGE": "Доступ запрещён"
+  "FORBIDDEN_PAGE": "Доступ запрещён",
+  "YOUR_FEEDBACK": "Ваш отзыв",
+  "FEEDBACK_CLOSE": "Закрыть",
+  "FEEDBACK_SEND": "Отправить"
 }

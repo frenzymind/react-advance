@@ -49,6 +49,7 @@ export function Dropdown(props: DropdownProps) {
                                 as={AppLink}
                                 to={item.href}
                                 disabled={item.disabled}
+                                key={`dropdown-key-${index}`}
                                 // id={`dropdown-item-${index}`}
                             >
                                 {content}
@@ -57,7 +58,11 @@ export function Dropdown(props: DropdownProps) {
                     }
 
                     return (
-                        <Menu.Item key={index} as={Fragment} disabled={item.disabled}>
+                        <Menu.Item
+                            key={`dropdown-key-${index}`}
+                            as={Fragment}
+                            disabled={item.disabled}
+                        >
                             {content}
                         </Menu.Item>
                     )

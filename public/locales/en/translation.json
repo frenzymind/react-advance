@@ -25,5 +25,8 @@
   "NAVBAR_USER_PROFILE": "Profile",
   "ADMIN_PAGE": "Admin Page",
   "NAVBAR_ADMIN": "admin",
-  "FORBIDDEN_PAGE": "Forbidden"
+  "FORBIDDEN_PAGE": "Forbidden",
+  "YOUR_FEEDBACK": "your feedback",
+  "FEEDBACK_CLOSE": "close",
+  "FEEDBACK_SEND": "Send"
 }
