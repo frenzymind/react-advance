@@ -28,5 +28,8 @@
   "FORBIDDEN_PAGE": "Доступ запрещён",
   "YOUR_FEEDBACK": "Ваш отзыв",
   "FEEDBACK_CLOSE": "Закрыть",
-  "FEEDBACK_SEND": "Отправить"
+  "FEEDBACK_SEND": "Отправить",
+  "RATE_ARTICLE": "Оцените статью",
+  "RATE_ARTICLE_MESSAGE": "Оставьте свой отзыв",
+  "RATING_THANKS": "Спасибо за оценку"
 }

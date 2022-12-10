@@ -28,5 +28,8 @@
   "FORBIDDEN_PAGE": "Forbidden",
   "YOUR_FEEDBACK": "your feedback",
   "FEEDBACK_CLOSE": "close",
-  "FEEDBACK_SEND": "Send"
+  "FEEDBACK_SEND": "Send",
+  "RATE_ARTICLE": "Rate the article",
+  "RATE_ARTICLE_MESSAGE": "Leave your feedback",
+  "RATING_THANKS": "thank you for rating"
 }
