@@ -1,8 +1,6 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/shared/providers/ThemeProvider'
-import ArticleRating from './ArticleRating'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import ArticleRating from './ArticleRating'
 
 export default {
     title: 'features/ArticleRating',

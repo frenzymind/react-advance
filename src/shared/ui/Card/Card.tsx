@@ -18,8 +18,8 @@ export const Card: FC<cardProps> = props => {
     const { className, children, theme = CardTheme.NORMAL, max, ...otherProps } = props
 
     return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
         <div
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
             className={classNames(cls.Card, { [cls.max]: max }, [className, cls[theme]])}
         >

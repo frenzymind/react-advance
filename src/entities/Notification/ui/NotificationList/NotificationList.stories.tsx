@@ -1,8 +1,6 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/shared/providers/ThemeProvider'
-import { NotificationList } from './NotificationList'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { NotificationList } from './NotificationList'
 
 export default {
     title: 'entities/NotificationList',
