@@ -7,7 +7,7 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitEffect } from '@/shared/lib/hooks/useInitEffect/useInitEffect'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import { articlePageReducer } from '../../model/slice/articlePageSlice'

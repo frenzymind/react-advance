@@ -7,4 +7,9 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector'
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
 export { getArticleDetailsData } from './model/selectors/articleDetails'
-export { ArticleView, ArticleSortField, ArticleType } from './model/constants/consts'
+export {
+    ArticleView,
+    ArticleSortField,
+    ArticleType,
+    ArticleBlockType,
+} from './model/constants/consts'

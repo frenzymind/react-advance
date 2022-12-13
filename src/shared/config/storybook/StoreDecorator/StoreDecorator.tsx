@@ -1,3 +1,5 @@
+/* eslint-disable test-fsd/public-api-imports */
+// TODO: Fix testing public API
 import { Story } from '@storybook/react'
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
 import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice'
