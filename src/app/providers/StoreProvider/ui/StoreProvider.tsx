@@ -1,5 +1,5 @@
 import { ReducersMapObject } from '@reduxjs/toolkit'
-import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema'
+import { StateSchema } from '../config/StateSchema'
 import type { FC, ReactNode } from 'react'
 import { Provider } from 'react-redux'
 import { createReduxStore } from '../config/store'

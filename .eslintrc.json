@@ -52,6 +52,13 @@
                 "testFilesPatterns": ["**/*.test.ts", "**/*.test.ts", "**/StoreDecorator.tsx"]
             }
         ],
+        "test-fsd/layer-imports": [
+            "error",
+            {
+                "alias": "@",
+                "ignoreImportPatterns": ["**/StoreProvider", "**/testing"]
+            }
+        ],
         "@typescript-eslint/no-unused-vars": [
             "warn",
             {
