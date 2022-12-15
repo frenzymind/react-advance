@@ -1,21 +1,24 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './LoginForm.module.scss'
 import { FC, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
-import { Input } from '@/shared/ui/Input'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginActions, loginReducer } from '../../model/slice/loginSlice'
-import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName'
-import { Text, TextTheme } from '@/shared/ui/Text'
-import { getLoginUsername } from '../../model/selectors/getLoginUserName/getLoginUserName'
-import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword'
-import { getLoginLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading'
+
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
+import { getLoginLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading'
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword'
+import { getLoginUsername } from '../../model/selectors/getLoginUserName/getLoginUserName'
+import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName'
+import { loginActions, loginReducer } from '../../model/slice/loginSlice'
+
+import cls from './LoginForm.module.scss'
+
+import { classNames } from '@/shared/lib/classNames/classNames'
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Input } from '@/shared/ui/Input'
+import { Text, TextTheme } from '@/shared/ui/Text'
 
 export interface LoginFormProps {
     className?: string

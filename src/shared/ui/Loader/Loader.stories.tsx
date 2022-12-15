@@ -1,7 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+
+import { Loader } from './Loader'
+
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from '@/shared/providers/ThemeProvider'
-import { Loader } from './Loader'
 
 export default {
     title: 'widget/Loader',

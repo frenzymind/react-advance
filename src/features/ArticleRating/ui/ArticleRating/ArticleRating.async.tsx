@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { articleRatingProps } from './ArticleRating'
 import { FC, lazy, Suspense } from 'react'
+
+import { articleRatingProps } from './ArticleRating'
+
 import { Skeleton } from '@/shared/Skeleton/Skeleton'
 
 const ArticleRatingLazy = lazy<FC<articleRatingProps>>(() => import('./ArticleRating'))

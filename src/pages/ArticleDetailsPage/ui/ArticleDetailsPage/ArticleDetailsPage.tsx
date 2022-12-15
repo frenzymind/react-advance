@@ -1,7 +1,15 @@
-import { ArticleDetails } from '@/entities/Article'
-import { ArticlesRecommendationList } from '@/features/ArticlesRecommendationList'
 import { FC, memo } from 'react'
 import { useParams } from 'react-router-dom'
+
+import { articleDetailsPageReducer } from '../../model/slice'
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
+
+import cls from './ArticleDetailsPage.module.scss'
+
+import { ArticleDetails } from '@/entities/Article'
+import { ArticleRating } from '@/features/ArticleRating'
+import { ArticlesRecommendationList } from '@/features/ArticlesRecommendationList'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
     DynamicModuleLoader,
@@ -9,11 +17,6 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { VStack } from '@/shared/ui/Stack'
 import { Page } from '@/widgets/Page'
-import { articleDetailsPageReducer } from '../../model/slice'
-import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
-import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
-import cls from './ArticleDetailsPage.module.scss'
-import { ArticleRating } from '@/features/ArticleRating'
 
 interface ArticleDetailsPageProps {
     className?: string

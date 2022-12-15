@@ -1,7 +1,10 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './ArticleCodeBlockComponent.module.scss'
 import type { FC } from 'react'
+
 import { ArticleCodeBlock } from '../../model/types/article'
+
+import cls from './ArticleCodeBlockComponent.module.scss'
+
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { Code } from '@/shared/ui/Code'
 
 interface articleCodeBlockComponentProps {

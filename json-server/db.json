@@ -605,6 +605,12 @@
       "userId": "1",
       "text": "Yeah!",
       "id": "m0wpHKL"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "bad",
+      "id": "GI8P3pY"
     }
   ],
   "users": [
@@ -723,6 +729,13 @@
       "rate": 5,
       "feedback": "ALOHA",
       "id": "sRDlpdZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 4,
+      "feedback": "very poor",
+      "id": "_rVg87g"
     }
   ],
   "profile-ratings": [

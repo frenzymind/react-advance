@@ -7,6 +7,8 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { AxiosInstance } from 'axios'
+import { NavigateOptions, To } from 'react-router-dom'
+
 import { articleDetailsSchema } from '@/entities/Article'
 import { CounterSchema } from '@/entities/Counter'
 import { UserSchema } from '@/entities/User'
@@ -16,7 +18,6 @@ import { ProfileSchema } from '@/features/EditableProfileCard'
 import { ScrollRestorePositionSchema } from '@/features/ScrollRestorePosition'
 import { ArticlDetailsPageSchema } from '@/pages/ArticleDetailsPage'
 import { ArticlePageSchema } from '@/pages/ArticlesPage'
-import { NavigateOptions, To } from 'react-router-dom'
 import { rtkApi } from '@/shared/api/rtkApi'
 
 export interface StateSchema {

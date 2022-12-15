@@ -1,5 +1,14 @@
 import { FC, memo, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
+
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
+import { articlePageReducer } from '../../model/slice/articlePageSlice'
+import { ArticleInfinityList } from '../ArticleInfinityList/ArticleInfinityList'
+import { ArticlesPageFilter } from '../ArticlesPageFilter/ArticlesPageFilter'
+
+import cls from './Articlepage.module.scss'
+
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
     DynamicModuleLoader,
@@ -8,12 +17,6 @@ import {
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitEffect } from '@/shared/lib/hooks/useInitEffect/useInitEffect'
 import { Page } from '@/widgets/Page'
-import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
-import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
-import { articlePageReducer } from '../../model/slice/articlePageSlice'
-import { ArticleInfinityList } from '../ArticleInfinityList/ArticleInfinityList'
-import { ArticlesPageFilter } from '../ArticlesPageFilter/ArticlesPageFilter'
-import cls from './Articlepage.module.scss'
 
 interface articlepageProps {
     className?: string

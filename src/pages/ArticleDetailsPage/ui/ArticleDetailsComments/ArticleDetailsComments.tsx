@@ -1,17 +1,19 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Text, TextSize } from '@/shared/ui/Text'
+import { useSelector } from 'react-redux'
+
+import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
+
 import { CommentList } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/AddCommentForm'
-import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
-import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitEffect } from '@/shared/lib/hooks/useInitEffect/useInitEffect'
-import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import { useSelector } from 'react-redux'
-import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { VStack } from '@/shared/ui/Stack'
+import { Text, TextSize } from '@/shared/ui/Text'
 
 interface articleDetailsCommentsProps {
     className?: string

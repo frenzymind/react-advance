@@ -1,8 +1,10 @@
+import { ValidateProfileError } from '../../constants/ValidateProfileError'
+
+import { updateProfileData } from './updateProfileData'
+
 import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
-import { ValidateProfileError } from '../../constants/ValidateProfileError'
 import { TestAsyncThunk } from '@/shared/lib/tests/testAsyncThunk/TestAsyncThunk'
-import { updateProfileData } from './updateProfileData'
 
 const data = {
     username: 'admin',

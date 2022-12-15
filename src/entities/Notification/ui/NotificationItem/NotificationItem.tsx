@@ -1,7 +1,10 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './NotificationItem.module.scss'
 import type { FC } from 'react'
+
 import { INotification } from '../../model/types/notifications'
+
+import cls from './NotificationItem.module.scss'
+
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { Card, CardTheme } from '@/shared/ui/Card'
 import { Text } from '@/shared/ui/Text'
 

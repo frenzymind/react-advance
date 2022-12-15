@@ -1,7 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+
+import { NotificationsButton } from './NotificationsButton'
+
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from '@/shared/providers/ThemeProvider'
-import { NotificationsButton } from './NotificationsButton'
 
 export default {
     title: 'features/NotificationsButton',

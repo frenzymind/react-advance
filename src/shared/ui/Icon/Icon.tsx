@@ -1,6 +1,8 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './Icon.module.scss'
 import type { FC } from 'react'
+
+import cls from './Icon.module.scss'
+
+import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface iconProps extends React.SVGProps<SVGSVGElement> {
     className?: string

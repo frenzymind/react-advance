@@ -1,7 +1,9 @@
+import { ValidateProfileError } from '../../constants/ValidateProfileError'
+
+import { validateProfile } from './validateProfile'
+
 import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
-import { ValidateProfileError } from '../../constants/ValidateProfileError'
-import { validateProfile } from './validateProfile'
 
 const data = {
     username: 'admin',

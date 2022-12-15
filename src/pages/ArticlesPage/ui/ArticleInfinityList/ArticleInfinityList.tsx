@@ -1,14 +1,16 @@
-import { ArticleList } from '@/entities/Article'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { Text } from '@/shared/ui/Text'
+
 import {
     getArticlePageError,
     getArticlePageIsLoading,
     getArticlePageView,
 } from '../../model/selectors/articlePageSelectors'
 import { getArticles } from '../../model/slice/articlePageSlice'
+
+import { ArticleList } from '@/entities/Article'
+import { Text } from '@/shared/ui/Text'
 
 interface articleInfinityListProps {
     className?: string

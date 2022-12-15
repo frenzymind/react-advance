@@ -1,7 +1,9 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './PageError.module.scss'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+
+import cls from './PageError.module.scss'
+
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button } from '@/shared/ui/Button'
 
 interface PageErrorProps {
