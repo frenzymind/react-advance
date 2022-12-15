@@ -3,7 +3,7 @@ import { FC, memo } from 'react'
 import { Theme, useTheme } from '@/shared/providers/ThemeProvider'
 import LightIcon from '@/shared/assets/icons/theme-light.svg'
 import DarkIcon from '@/shared/assets/icons/theme-dark.svg'
-import { Button } from '@/shared/ui/Button/Button'
+import { Button } from '@/shared/ui/Button'
 
 interface ThemeSwitcherProps {
     className?: string

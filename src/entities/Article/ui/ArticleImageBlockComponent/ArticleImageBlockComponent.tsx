@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleImageBlockComponent.module.scss'
 import type { FC } from 'react'
 import { ArticleImageBlock } from '../../model/types/article'
-import { Text, TextAlighn } from '@/shared/ui/Text/Text'
+import { Text, TextAlighn } from '@/shared/ui/Text'
 
 interface articleImageBlockComponentProps {
     className?: string
