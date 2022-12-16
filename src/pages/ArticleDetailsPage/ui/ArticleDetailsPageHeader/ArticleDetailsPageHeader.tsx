@@ -29,7 +29,7 @@ export const ArticleDetailsPageHeader: FC<articleDetailsPageHeaderProps> = props
     }, [navigate])
 
     const onEditArticle = useCallback(() => {
-        navigate(getRouteArticleDetails(article?.id))
+        navigate(getRouteArticleDetails(article?.id || ''))
     }, [article?.id, navigate])
 
     return (
