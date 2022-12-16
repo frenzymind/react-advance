@@ -9,7 +9,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import cls from './ArticleListItem.module.scss'
 
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteArticleDetails } from '@/shared/constants/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
@@ -39,7 +39,7 @@ export const ArticleListItem: FC<articleListItemProps> = props => {
     )
 
     const onOpenArticle = useCallback(() => {
-        navigate(RoutePath.article + '/' + article.id)
+        navigate(getRouteArticleDetails(article.id))
     }, [article.id, navigate])
 
     if (view === ArticleView.BIG) {
@@ -62,7 +62,7 @@ export const ArticleListItem: FC<articleListItemProps> = props => {
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
                     <div className={cls.footer}>
-                        <AppLink target={target} to={RoutePath.article + '/' + article.id}>
+                        <AppLink target={target} to={getRouteArticleDetails(article.id)}>
                             <Button onClick={onOpenArticle} theme={ButtonTheme.OUTLINE}>
                                 {t('READ_ARTICLE')}
                             </Button>
@@ -78,7 +78,7 @@ export const ArticleListItem: FC<articleListItemProps> = props => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article + '/' + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>

@@ -7,6 +7,7 @@ import { MutableRefObject, useCallback, useRef } from 'react'
  * @param delay Delay
  * @returns void
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useDebounce(cb: (...args: any[]) => void, delay: number) {
     const timerRef = useRef() as MutableRefObject<NodeJS.Timeout>
 

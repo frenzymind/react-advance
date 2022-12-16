@@ -8,7 +8,7 @@ import { getUserAuthData } from '@/entities/User'
 import { LoginModal } from '@/features/AuthByUsername'
 import { AvatarDropdown } from '@/features/AvatarDropdown'
 import { NotificationsButton } from '@/features/NotificationsButton'
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteArticleCreate } from '@/shared/constants/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
@@ -42,7 +42,7 @@ const NoMemoNavbar = ({ className }: NavbarProps) => {
                 />
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
-                    to={RoutePath.article_create}
+                    to={getRouteArticleCreate()}
                     className={cls.createBtn}
                 >
                     {t('CREATE_ARTICLE')}

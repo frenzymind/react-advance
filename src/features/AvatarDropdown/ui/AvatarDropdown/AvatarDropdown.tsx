@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User'
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteAdmin, getRouteProfile } from '@/shared/constants/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Avatar } from '@/shared/ui/Avatar'
@@ -41,13 +41,13 @@ export const AvatarDropdown: FC<avatarDropdownProps> = props => {
                     ? [
                           {
                               content: t('NAVBAR_ADMIN'),
-                              href: RoutePath.admin_panel,
+                              href: getRouteAdmin(),
                           },
                       ]
                     : []),
                 {
                     content: t('NAVBAR_USER_PROFILE'),
-                    href: RoutePath.profile + '/' + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: t('LOG_OUT'),
