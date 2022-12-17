@@ -31,5 +31,6 @@
   "FEEDBACK_SEND": "Send",
   "RATE_ARTICLE": "Rate the article",
   "RATE_ARTICLE_MESSAGE": "Leave your feedback",
-  "RATING_THANKS": "thank you for rating"
+  "RATING_THANKS": "thank you for rating",
+  "COUNTER_ADD_5": "add 5"
 }
