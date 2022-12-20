@@ -1,5 +1,10 @@
 import { CSSProperties, FC, useMemo } from 'react'
 
+import { Skeleton } from '../../Skeleton/Skeleton'
+import UserIcon from '../../assets/icons/user-filled.svg'
+import { AppImage } from '../AppImage'
+import { Icon } from '../Icon'
+
 import cls from './Avatar.module.scss'
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames'
@@ -23,8 +28,13 @@ export const Avatar: FC<AvatarProps> = props => {
         }
     }, [size])
 
+    const fallback = <Skeleton width={size} height={size} border={'50%'} />
+    const errorFallback = <Icon Svg={UserIcon} width={size} height={size} />
+
     return (
-        <img
+        <AppImage
+            fallback={fallback}
+            errorFallback={errorFallback}
             src={src}
             style={styles}
             alt={alt}
