@@ -6,7 +6,7 @@ const MainPage = () => {
     const { t } = useTranslation()
 
     return (
-        <Page>
+        <Page data-testid='MainPage'>
             {t('MAIN_PAGE_CONTENT')}
             <div>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugiat. Cumque,

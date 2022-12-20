@@ -11,8 +11,9 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { useInfinitiScroll } from '@/shared/lib/hooks/useInfinitiScroll/useInfinitiScroll'
 import { useInitEffect } from '@/shared/lib/hooks/useInitEffect/useInitEffect'
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
+import { TestProps } from '@/shared/types/tests'
 
-interface pageProps {
+interface pageProps extends TestProps {
     className?: string
     children: ReactNode
     onScrollEnd?: () => void
@@ -51,6 +52,7 @@ export const Page: FC<pageProps> = props => {
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? <div ref={triggerRef} className={cls.triggerRef} /> : null}
