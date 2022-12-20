@@ -1,12 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Page } from './Page'
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/shared/providers/ThemeProvider'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
-    title: 'shared/Page',
+    title: 'widget/Page',
     component: Page,
 
     argTypes: {
@@ -14,11 +13,20 @@ export default {
     },
 } as ComponentMeta<typeof Page>
 
-const Template: ComponentStory<typeof Page> = args => <Page {...args} />
+const Template: ComponentStory<typeof Page> = args => (
+    <Page
+        {...args}
+        // eslint-disable-next-line react/no-children-prop
+        children={
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum porro deleniti quis!
+                Illum incidunt doloribus quod, cupiditate, sint laudantium rerum ad quasi nam,
+                aspernatur accusamus. Eum quisquam maxime odit ullam.
+            </div>
+        }
+    />
+)
 
 export const Normal = Template.bind({})
 Normal.args = {}
-
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Normal.decorators = [StoreDecorator({})]

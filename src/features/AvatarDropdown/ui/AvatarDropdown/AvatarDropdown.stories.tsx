@@ -2,8 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { AvatarDropdown } from './AvatarDropdown'
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/shared/providers/ThemeProvider'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
     title: 'features/AvatarDropdown',
@@ -18,7 +17,4 @@ const Template: ComponentStory<typeof AvatarDropdown> = args => <AvatarDropdown 
 
 export const Normal = Template.bind({})
 Normal.args = {}
-
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Normal.decorators = [StoreDecorator({})]
