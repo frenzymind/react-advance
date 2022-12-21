@@ -35,7 +35,7 @@ export const Counter: FC = () => {
             <Button data-testid='decrement-btn' onClick={handleDecrement}>
                 {t('COUNTER_DECREMENT')}
             </Button>
-            <Button data-testid='decrement-btn' onClick={handleAddFive}>
+            <Button data-testid='decrement-btn-5' onClick={handleAddFive}>
                 {t('COUNTER_ADD_5')}
             </Button>
         </div>
