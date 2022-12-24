@@ -1,6 +1,6 @@
 import { FC, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
 import { getLoginLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading'
@@ -16,6 +16,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { Input } from '@/shared/ui/Input'
 import { Text, TextTheme } from '@/shared/ui/Text'
@@ -30,7 +31,7 @@ const initialReducers: ReducersList = {
 
 const LoginForm: FC<LoginFormProps> = memo(function LoginForm(props: LoginFormProps) {
     const { className } = props
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const { t } = useTranslation()
 
     const username = useSelector(getLoginUsername)
