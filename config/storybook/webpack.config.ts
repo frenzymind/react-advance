@@ -27,7 +27,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
         if (/svg/.test(rule.test as string)) {
             return {
                 ...rule,
-                exclude: /\.svg$/i,
+                exclude: /\.(png|svg|jpe?g|gif)$/i,
             }
         }
 
@@ -38,6 +38,15 @@ export default ({ config }: { config: webpack.Configuration }) => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
     })
+
+    config.module?.rules.push({
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]',
+        },
+    })
+
     config.module?.rules?.push(buildCssLoader(true))
 
     config.plugins?.push(

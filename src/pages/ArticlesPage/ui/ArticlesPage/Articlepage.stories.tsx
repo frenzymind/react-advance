@@ -5,17 +5,6 @@ import Articlepage from './Articlepage'
 import { Article, ArticleBlockType, ArticleType } from '@/entities/Article'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
-export default {
-    title: 'pages/Articlepage',
-    component: Articlepage,
-
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Articlepage>
-
-const Template: ComponentStory<typeof Articlepage> = args => <Articlepage {...args} />
-
 const article: Article = {
     id: '1',
     title: 'Javascript news',
@@ -55,6 +44,33 @@ const article: Article = {
         },
     ],
 }
+
+export default {
+    title: 'pages/ArticlesPage',
+    component: Articlepage,
+
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+    // parameters: {
+    //     mockData: [
+    //         {
+    //             url:
+    //                 __API__ +
+    //                 '/articles?_expand=user&_limit=9&_page=2&_sort=createdAt&_order=asc&q=',
+    //             method: 'GET',
+    //             status: 200,
+    //             response: [
+    //                 {
+    //                     data: [],
+    //                 },
+    //             ],
+    //         },
+    //     ],
+    // },
+} as ComponentMeta<typeof Articlepage>
+
+const Template: ComponentStory<typeof Articlepage> = args => <Articlepage {...args} />
 
 export const Normal = Template.bind({})
 Normal.args = {}

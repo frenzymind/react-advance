@@ -6,7 +6,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/shared/providers/ThemeProvider'
 
 export default {
-    title: 'widget/AppLink',
+    title: 'shared/AppLink',
     component: AppLink,
 
     argTypes: {
